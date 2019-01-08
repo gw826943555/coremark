@@ -2,8 +2,8 @@
 from building import *
 
 cwd     = GetCurrentDir()
-src     = Glob('*.c') + Glob('*.cpp')
-CPPPATH = [cwd]
+src     = Glob('./src/*.c') + Glob('./src/*.cpp')
+CPPPATH = [cwd+'/inc']
 
 group = DefineGroup('coremark', src, depend = [''], CPPPATH = CPPPATH)
 
